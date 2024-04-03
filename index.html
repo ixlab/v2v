@@ -1,206 +1,231 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>V2V: Efficiently Synthesizing Video Results for Video Queries</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">V2V: Efficiently Synthesizing Video Results for Video Queries</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://dominik.win">Dominik Winecki</a>,</span>
-            <span class="author-block">
-              <a href="https://arnab.org">Arnab Nandi</a>,</span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">The Ohio State University</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://icde2024.github.io/DEFT.html"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://example.com"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://example.com"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/datateam/V2V"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
+            <h1 class="title is-1 publication-title">V2V: Efficiently Synthesizing Video Results for Video Queries</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://dominik.win">Dominik Winecki</a>,</span>
+              <span class="author-block">
+                <a href="https://arnab.org">Arnab Nandi</a>,</span>
             </div>
 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The Ohio State University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://icde2024.github.io/DEFT.html"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="https://example.com" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://example.com" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ixlab/v2v" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/v2v_diagram.png" alt="V2V Diagram" style="width: 100%;" />
-      <h2 class="subtitle has-text-centered">
-        <em>V2V</em> efficiently synthesizes video results for video queries.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Querying video data has become increasingly popular and useful. 
-            Video queries can be complex, ranging from retrieval tasks <em>("find me the top videos that have...")</em>, to analytics <em>("how many videos contained object X per day?")</em>, to excerpting tasks <em>("highlight and zoom into scenes with object X near object Y")</em>, or combinations thereof.
-          </p>
-          <p>
-            Results for video queries are still typically shown as either relational data or a primitive collection of clickable thumbnails on a web page.
-            Presenting query results in this form is an impedance mismatch with the video medium: they are cumbersome to skim through and are in a different modality and information density compared to the source data.
-            We describe <em><b>V2V</b></em>, a system to efficiently synthesize <em><b>video</b> results for video queries</em>. V2V returns a fully-edited video, allowing the user to consume results in the same manner as the source videos.
-          </p>
-          <p>
-            A key challenge is that synthesizing video results from a collection of videos is computationally intensive, especially within interactive query response times.
-            To address this, V2V features a grammar to express video transformations in a declarative manner and a heuristic optimizer that improves the efficiency of V2V processing in a manner similar to how databases execute relational queries. Experiments show that our V2V optimizer enables video synthesis to run 3&times; faster.
-          </p>
-        </div>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/v2v_diagram.png" alt="V2V Diagram" style="width: 100%;" />
+        <h2 class="subtitle has-text-centered">
+          <em>V2V</em> efficiently synthesizes video results for video queries.
+        </h2>
       </div>
     </div>
-</section>
+  </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">The V2V System</h2>
-
-        <h3 class="title is-4">Spesifications</h3>
-        <div class="content has-text-justified">
-          <p>
-            To return a video result for a video query, V2V creates a declarative spesification from a relational query:
-          </p>
-          <pre><code>Render(t) = match t { 
-            t in Range(0, 300, 1/30) => vid1[t], 
-            t in Range(300, 600, 1/30) =>
-                Grid(
-                    vid1[t + 13463/30],
-                    Overlay(vid2[t], "overlay.png"),
-                    Zoom(vid3[t], 10.0),
-                    vid4[t + 9952/30]
-                )}</code></pre>
-          
-          <p>
-            Data can also be included in the spesification by referencing data arrays.
-            For example, to draw bounding boxes on a video:
-          </p>
-          <pre><code>Render(t) = BoundingBox(vid1[t], vid1_bb[t])</code></pre>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Querying video data has become increasingly popular and useful.
+              Video queries can be complex, ranging from retrieval tasks <em>("find me the top videos that
+                have...")</em>, to analytics <em>("how many videos contained object X per day?")</em>, to excerpting
+              tasks <em>("highlight and zoom into scenes with object X near object Y")</em>, or combinations thereof.
+            </p>
+            <p>
+              Results for video queries are still typically shown as either relational data or a primitive collection of
+              clickable thumbnails on a web page.
+              Presenting query results in this form is an impedance mismatch with the video medium: they are cumbersome
+              to skim through and are in a different modality and information density compared to the source data.
+              We describe <em><b>V2V</b></em>, a system to efficiently synthesize <em><b>video</b> results for video
+                queries</em>. V2V returns a fully-edited video, allowing the user to consume results in the same manner
+              as the source videos.
+            </p>
+            <p>
+              A key challenge is that synthesizing video results from a collection of videos is computationally
+              intensive, especially within interactive query response times.
+              To address this, V2V features a grammar to express video transformations in a declarative manner and a
+              heuristic optimizer that improves the efficiency of V2V processing in a manner similar to how databases
+              execute relational queries. Experiments show that our V2V optimizer enables video synthesis to run
+              3&times; faster.
+            </p>
+          </div>
         </div>
-
-        <br/>
-
-        <h2 class="title is-3">Optimization</h2>
-        <div class="content has-text-justified">
-          <p>
-            V2V features an optimizer that improves the efficiency of video synthesis.
-            It uses database-style optimization techniques, optimizing specs the same way a database optimizer optimizes SQL queries.
-            When possible, V2V tries to reduce operations to stream copies, which do not require decoding and encoding.
-          </p>
-
-          <img src="static/images/opt_plans.svg" alt="V2V Optimizer" style="width: 100%;" />
       </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{winecki2024v2v,
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">The V2V System</h2>
+
+          <h3 class="title is-4">Specifications</h3>
+          <div class="content has-text-justified">
+            <p>
+              To return a video result for a video query, V2V creates a declarative specification from a relational
+              query:
+            </p>
+            <pre><code>Spec = &lt;TimeDomain, Render,
+          videos: {&quot;vid1&quot;: &quot;video1.mp4&quot;, ...},
+          data_arrays: {&quot;vid1_bb&quot;: &quot;annot1.json&quot;}&gt;
+
+TimeDomain = Range(0, 600, 1/30)  // The output video is 10 minutes at 30FPS
+
+Render(t) = match t {
+  t in Range(0, 300, 1/30) => vid1[t],  // Take first 5 minutes from vid1
+  t in Range(300, 600, 1/30) =>  // Compose vid1-vid4 in a grid with other effects
+      Grid(
+          vid1[t + 13463/30],
+          Overlay(vid2[t], "overlay.png"),
+          Zoom(vid3[t], 10.0),
+          vid4[t + 9952/30]
+      )}</code></pre>
+            <p>
+              Data can also be included in the spesification by referencing data arrays.
+              For example, to draw bounding boxes on a video:
+            </p>
+            <pre><code>Render(t) = BoundingBox(vid1[t], vid1_bb[t])</code></pre>
+          </div>
+
+          <br />
+
+          <h2 class="title is-3">Optimization</h2>
+          <div class="content has-text-justified">
+            <p>
+              V2V features an optimizer that improves the efficiency of video synthesis.
+              It uses database-style optimization techniques, optimizing specs the same way a database optimizer
+              optimizes SQL queries.
+              When possible, V2V tries to reduce operations to stream copies, which do not require decoding and
+              encoding.
+            </p>
+
+            <img src="static/images/opt_plans.svg" alt="V2V Optimizer" style="width: 100%;" />
+          </div>
+
+          <h2 class="title is-3">Performance</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our optimizer improves the efficiency of V2V processing by 3&times; on average:
+            </p>
+
+            <img src="static/images/plots.svg" alt="V2V Performance" style="display: block; margin: auto; width: 80%;" />
+          </div>
+        </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{winecki2024_v2v,
   author    = {Winecki, Dominik and Nandi, Arnab},
   title     = {V2V: Efficiently Synthesizing Video Results for Video Queries},
-  journal   = {ICDE},
+  booktitle = {2024 IEEE 40th International Conference on Data Engineering (ICDE)},
   year      = {2024},
 }</code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This material is based upon work supported by the National Science Foundation under Award No. 1910356. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-          </p>
-          <p>
-            This website is website adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This material is based upon work supported by the National Science Foundation under Award No. 1910356. Any
+              opinions, findings and conclusions or recommendations expressed in this material are those of the
+              author(s) and do not necessarily reflect the views of the National Science Foundation.
+            </p>
+            <p>
+              This website is website adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+              licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>

@@ -1,0 +1,45 @@
+{
+  "iter": {
+    "start": [
+      0,
+      1
+    ],
+    "end": [
+      60,
+      1
+    ],
+    "step": [
+      1,
+      24
+    ]
+  },
+  "render": {
+    "F2fFunction": {
+      "func": "Filter",
+      "sources": [
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  300,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ],
+      "args": [
+        {
+          "ConstStr": "gblur=sigma=30"
+        }
+      ]
+    }
+  },
+  "output": "/scratch/output4.mp4"
+}

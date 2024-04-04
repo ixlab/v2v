@@ -1,0 +1,16 @@
+[package]
+name = "dve-lib"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+"num-traits" = "0.2"
+"num-rational" = { version = "0.4", features=["serde"] }
+uuid = { version = "1.4", features = ["v4"]}
+rayon = "1.7.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+petgraph = "0.6.4"
+log = "0.4.20"

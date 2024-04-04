@@ -1,0 +1,89 @@
+{
+  "iter": {
+    "start": [
+      0,
+      1
+    ],
+    "end": [
+      60,
+      1
+    ],
+    "step": [
+      1,
+      24
+    ]
+  },
+  "render": {
+    "F2fFunction": {
+      "func": "Quadrents",
+      "sources": [
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  60,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  120,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  180,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  240,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ],
+      "args": []
+    }
+  },
+  "output": "/scratch/output3.mp4"
+}

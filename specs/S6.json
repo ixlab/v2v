@@ -1,0 +1,149 @@
+{
+  "iter": {
+    "start": [
+      0,
+      1
+    ],
+    "end": [
+      300,
+      1
+    ],
+    "step": [
+      1,
+      24
+    ]
+  },
+  "render": {
+    "MatchT": [
+      [
+        {
+          "start": [
+            0,
+            1
+          ],
+          "end": [
+            60,
+            1
+          ],
+          "step": [
+            1,
+            24
+          ]
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  60,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ],
+      [
+        {
+          "start": [
+            60,
+            1
+          ],
+          "end": [
+            120,
+            1
+          ],
+          "step": [
+            1,
+            24
+          ]
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  60,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ],
+      [
+        {
+          "start": [
+            120,
+            1
+          ],
+          "end": [
+            180,
+            1
+          ],
+          "step": [
+            1,
+            24
+          ]
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  60,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ],
+      [
+        {
+          "start": [
+            180,
+            1
+          ],
+          "end": [
+            240,
+            1
+          ],
+          "step": [
+            1,
+            24
+          ]
+        },
+        {
+          "SourceFunction": {
+            "func": "ReadFrame",
+            "source": "videos/clip.mp4",
+            "t": {
+              "Add": [
+                "T",
+                [
+                  60,
+                  1
+                ]
+              ]
+            },
+            "args": []
+          }
+        }
+      ]
+    ]
+  },
+  "output": "/scratch/output2.mp4"
+}

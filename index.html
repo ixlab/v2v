@@ -42,8 +42,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="v2v-winecki-nandi-icde-2024.pdf"
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="v2v-winecki-nandi-icde-2024.pdf" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -88,7 +87,12 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/v2v_diagram.png" alt="V2V Diagram" style="width: 100%;" />
+        <!-- <img src="static/images/v2v_diagram.png" alt="V2V Diagram" style="width: 100%;" /> -->
+
+        <video width="100%" preload autoplay muted loop playsinline>
+          <source src="static/images/v2v_diagram.mp4" type="video/mp4" />
+        </video>
+
         <h2 class="subtitle has-text-centered">
           <em>V2V</em> efficiently synthesizes video results for video queries.
         </h2>
@@ -187,7 +191,8 @@ Render(t) = match t {
               Our optimizer improves the efficiency of V2V processing by 3&times; on average:
             </p>
 
-            <img src="static/images/plots.svg" alt="V2V Performance" style="display: block; margin: auto; width: 80%;" />
+            <img src="static/images/plots.svg" alt="V2V Performance"
+              style="display: block; margin: auto; width: 80%;" />
           </div>
         </div>
   </section>

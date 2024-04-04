@@ -87,11 +87,23 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <!-- <img src="static/images/v2v_diagram.png" alt="V2V Diagram" style="width: 100%;" /> -->
-
-        <video width="100%" preload autoplay muted loop playsinline>
+        <video id="videoPlayer" width="100%" preload autoplay muted loop playsinline>
           <source src="static/images/v2v_diagram.mp4" type="video/mp4" />
         </video>
+
+        <!-- Safari will not autoplay a video tag if it's in low power mode. Here's the Apple-spesific workaround. -->
+        <img id="safariVideoPlayer" src="static/images/v2v_diagram.mp4" alt="" style="width: 100%; display: none;" />
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            if (isSafari) {
+              var videoPlayer = document.getElementById('videoPlayer');
+              var imageFallback = document.getElementById('safariVideoPlayer');
+              videoPlayer.style.display = 'none';
+              imageFallback.style.display = 'block';
+            }
+          });
+        </script>
 
         <h2 class="subtitle has-text-centered">
           <em>V2V</em> efficiently synthesizes video results for video queries.

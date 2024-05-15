@@ -6,7 +6,7 @@ You should use this code if you want to:
 * Replicate the V2V results
 * Extend V2V or Benchmark against V2V for research purposes
 
-This code is research-grade (i.e., not suiteble for actual use).
+This code is research-grade (i.e., not suitable for actual use).
 
 ## Install
 

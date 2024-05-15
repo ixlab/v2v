@@ -1,6 +1,12 @@
 ### The code for V2V: Efficiently Synthesizing Video Results for Video Queries
 
-This repo has been sanitized to remove references to unpublished work.
+You should use this code if you want to:
+
+* See how we implement our data-oriented declarative video editor (particularly the optimizer and stream copies/smart cuts)
+* Replicate the V2V results
+* Extend V2V or Benchmark against V2V for research purposes
+
+This code is research-grade (i.e., not suiteble for actual use).
 
 ## Install
 

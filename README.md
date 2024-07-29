@@ -58,3 +58,17 @@ ffprobe -i clip.mp4 -show_frames -show_streams -count_frames -print_format json 
 cat clip.ffprobe.json | jq '.frames[] | select(.key_frame == 1) | .pkt_pts' | awk '{printf "clip0009_key.insert(Rational64::new(%d, 12288));\n", $1}'
 ```
 
+## Citation
+
+```bibtex
+@inproceedings{winecki2024_v2v,
+  author={Winecki, Dominik and Nandi, Arnab},
+  booktitle={2024 IEEE 40th International Conference on Data Engineering (ICDE)}, 
+  title={V2V: Efficiently Synthesizing Video Results for Video Queries}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={5614-5621},
+  doi={10.1109/ICDE60146.2024.00449}
+}
+```

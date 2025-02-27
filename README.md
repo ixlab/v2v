@@ -64,7 +64,7 @@ cat clip.ffprobe.json | jq '.frames[] | select(.key_frame == 1) | .pkt_pts' | aw
 @inproceedings{winecki2024_v2v,
   author={Winecki, Dominik and Nandi, Arnab},
   booktitle={2024 IEEE 40th International Conference on Data Engineering (ICDE)}, 
-  title={V2V: Efficiently Synthesizing Video Results for Video Queries}, 
+  title={{V2V}: Efficiently Synthesizing Video Results for Video Queries}, 
   year={2024},
   volume={},
   number={},
